@@ -1,8 +1,9 @@
 package com.example;
 
-import com.example.model.upgraded.Run;
-import com.example.model.upgraded.deserialization.*;
+import com.example.model.Run;
+import com.example.model.deserialization.*;
 import com.example.repository.RunRepository;
+import com.example.util.ConstUtil;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.boot.SpringApplication;
@@ -77,26 +78,26 @@ public class EntryPoint {
     private static void initGson() {
         ConstUtil.GSON = new GsonBuilder()
                 .registerTypeAdapter(Run.class, new RunTypeAdapter())
-                .registerTypeAdapter(ConstUtil.CAMPFIRE_CHOICES_TYPE_TOKEN.getType(), new CampfireChoicesTypeAdapter())
-                .registerTypeAdapter(ConstUtil.MASTER_DECKS_TYPE_TOKEN.getType(), new MasterDecksTypeAdapter())
-                .registerTypeAdapter(ConstUtil.RELICS_TYPE_TOKEN.getType(), new RelicsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.TAKEN_DAMAGES_TYPE_TOKEN.getType(), new TakenDamagesTypeAdapter())
-                .registerTypeAdapter(ConstUtil.POTIONS_USAGE_FLOORS_TYPE_TOKEN.getType(), new PotionsUsageFloorsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.POTIONS_OBTAINEDS_TYPE_TOKEN.getType(), new PotionsObtainedsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.ITEMS_PURCHASEDS_TYPE_TOKEN.getType(), new ItemsPurchasedsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.ITEMS_PURCHASEDS_FLOORS_TYPE_TOKEN.getType(), new ItemsPurchasedsFloorsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.TAKEN_PATHS_TYPE_TOKEN.getType(), new TakenPathsTypeAdapter())
-                .registerTypeAdapter(ConstUtil.PATH_PER_FLOORS_TYPE_TOKEN.getType(), new PathPerFloorsTypeAdapter())
+                .registerTypeAdapter(ConstUtil.CAMPFIRE_CHOICES_TYPE_TOKEN.getType(), new CampfireChoiceTypeAdapter())
+                .registerTypeAdapter(ConstUtil.MASTER_DECKS_TYPE_TOKEN.getType(), new MasterDeckTypeAdapter())
+                .registerTypeAdapter(ConstUtil.RELICS_TYPE_TOKEN.getType(), new RelicTypeAdapter())
+                .registerTypeAdapter(ConstUtil.TAKEN_DAMAGES_TYPE_TOKEN.getType(), new TakenDamageTypeAdapter())
+                .registerTypeAdapter(ConstUtil.POTIONS_USAGE_FLOORS_TYPE_TOKEN.getType(), new PotionsUsageFloorTypeAdapter())
+                .registerTypeAdapter(ConstUtil.POTIONS_OBTAINED_TYPE_TOKEN.getType(), new PotionsObtainedTypeAdapter())
+                .registerTypeAdapter(ConstUtil.ITEMS_PURCHASED_TYPE_TOKEN.getType(), new ItemsPurchasedTypeAdapter())
+                .registerTypeAdapter(ConstUtil.ITEMS_PURCHASED_FLOORS_TYPE_TOKEN.getType(), new ItemsPurchasedFloorsTypeAdapter())
+                .registerTypeAdapter(ConstUtil.TAKEN_PATHS_TYPE_TOKEN.getType(), new TakenPathTypeAdapter())
+                .registerTypeAdapter(ConstUtil.PATH_PER_FLOORS_TYPE_TOKEN.getType(), new PathPerFloorTypeAdapter())
                 .registerTypeAdapter(ConstUtil.CURRENT_HP_PER_FLOOR_TYPE_TOKEN.getType(), new CurrentHpPerFloorTypeAdapter())
                 .registerTypeAdapter(ConstUtil.MAX_HP_PER_FLOOR_TYPE_TOKEN.getType(), new MaxHpPerFloorTypeAdapter())
                 .registerTypeAdapter(ConstUtil.POTIONS_FLOOR_SPAWNED_TYPE_TOKEN.getType(), new PotionsFloorSpawnedTypeAdapter())
                 .registerTypeAdapter(ConstUtil.RELICS_OBTAINED_TYPE_TOKEN.getType(), new RelicsObtainedTypeAdapter())
-                .registerTypeAdapter(ConstUtil.CARD_CHOICES_TYPE_TOKEN.getType(), new CardChoicesTypeAdapter())
-                .registerTypeAdapter(ConstUtil.BOSS_RELICS_TYPE_TOKEN.getType(), new BossRelicsTypeAdapter())
+                .registerTypeAdapter(ConstUtil.CARD_CHOICES_TYPE_TOKEN.getType(), new CardChoiceTypeAdapter())
+                .registerTypeAdapter(ConstUtil.BOSS_RELICS_TYPE_TOKEN.getType(), new BossRelicTypeAdapter())
                 .registerTypeAdapter(ConstUtil.ITEMS_PURGED_TYPE_TOKEN.getType(), new ItemsPurgedTypeAdapter())
                 .registerTypeAdapter(ConstUtil.ITEMS_PURGED_FLOORS_TYPE_TOKEN.getType(), new ItemsPurgedFloorsTypeAdapter())
                 .registerTypeAdapter(ConstUtil.GOLD_PER_FLOOR_TYPE_TOKEN.getType(), new GoldPerFloorTypeAdapter())
-                .registerTypeAdapter(ConstUtil.EVENT_CHOICES_TYPE_TOKEN.getType(), new EventChoicesTypeAdapter())
+                .registerTypeAdapter(ConstUtil.EVENT_CHOICES_TYPE_TOKEN.getType(), new EventChoiceTypeAdapter())
                 .create();
     }
 
