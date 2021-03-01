@@ -57,10 +57,6 @@ public class RunTypeAdapter extends TypeAdapter<Run> {
                     run.setCircletCount(in.nextInt());
                     break;
                 }
-                case "is_trial": {
-                    run.setTrial(in.nextBoolean());
-                    break;
-                }
                 case "character_chosen": {
                     run.setChosenCharacter(in.nextString());
                     break;
@@ -77,24 +73,12 @@ public class RunTypeAdapter extends TypeAdapter<Run> {
                     run.setNeowBonus(in.nextString());
                     break;
                 }
-                case "is_prod": {
-                    run.setProd(in.nextBoolean());
-                    break;
-                }
-                case "is_daily": {
-                    run.setDaily(in.nextBoolean());
-                    break;
-                }
                 case "chose_seed": {
                     run.setChoseSeed(in.nextBoolean());
                     break;
                 }
                 case "campfire_upgraded": {
                     run.setCampfireUpgraded(in.nextInt());
-                    break;
-                }
-                case "win_rate": {
-                    run.setWinRate(in.nextDouble());
                     break;
                 }
                 case "build_version": {
@@ -111,10 +95,6 @@ public class RunTypeAdapter extends TypeAdapter<Run> {
                 }
                 case "player_experience": {
                     run.setPlayerExperience(in.nextInt());
-                    break;
-                }
-                case "is_endless": {
-                    run.setEndless(in.nextBoolean());
                     break;
                 }
                 case "ascension_level": {

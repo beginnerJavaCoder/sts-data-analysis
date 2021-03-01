@@ -21,8 +21,6 @@ public class Run extends Model {
     private String neowCost;
     @Column(name = "circlet_count")
     private Integer circletCount;
-    @Column(name = "is_trial")
-    private Boolean isTrial;
     @Column(name = "chosen_character")
     private String chosenCharacter;
     @Column(name = "campfire_rested")
@@ -30,16 +28,10 @@ public class Run extends Model {
     private Integer gold;
     @Column(name = "neow_bonus")
     private String neowBonus;
-    @Column(name = "is_prod")
-    private Boolean isProd;
-    @Column(name = "is_daily")
-    private Boolean isDaily;
     @Column(name = "chose_seed")
     private Boolean choseSeed;
     @Column(name = "campfire_upgraded")
     private Integer campfireUpgraded;
-    @Column(name = "win_rate")
-    private Double winRate;
     @Column(name = "build_version")
     private String buildVersion;
     @Column(name = "purchased_purges")
@@ -47,8 +39,6 @@ public class Run extends Model {
     private Boolean victory;
     @Column(name = "player_experience")
     private Integer playerExperience;
-    @Column(name = "is_endless")
-    private Boolean isEndless;
     @Column(name = "ascension_level")
     private Integer ascensionLevel;
 
@@ -333,14 +323,6 @@ public class Run extends Model {
         this.circletCount = circletCount;
     }
 
-    public Boolean getTrial() {
-        return isTrial;
-    }
-
-    public void setTrial(Boolean trial) {
-        isTrial = trial;
-    }
-
     public String getChosenCharacter() {
         return chosenCharacter;
     }
@@ -373,22 +355,6 @@ public class Run extends Model {
         this.neowBonus = neowBonus;
     }
 
-    public Boolean getProd() {
-        return isProd;
-    }
-
-    public void setProd(Boolean prod) {
-        isProd = prod;
-    }
-
-    public Boolean getDaily() {
-        return isDaily;
-    }
-
-    public void setDaily(Boolean daily) {
-        isDaily = daily;
-    }
-
     public Boolean getChoseSeed() {
         return choseSeed;
     }
@@ -403,14 +369,6 @@ public class Run extends Model {
 
     public void setCampfireUpgraded(Integer campfireUpgraded) {
         this.campfireUpgraded = campfireUpgraded;
-    }
-
-    public Double getWinRate() {
-        return winRate;
-    }
-
-    public void setWinRate(Double winRate) {
-        this.winRate = winRate;
     }
 
     public String getBuildVersion() {
@@ -443,14 +401,6 @@ public class Run extends Model {
 
     public void setPlayerExperience(Integer playerExperience) {
         this.playerExperience = playerExperience;
-    }
-
-    public Boolean getEndless() {
-        return isEndless;
-    }
-
-    public void setEndless(Boolean endless) {
-        isEndless = endless;
     }
 
     public Integer getAscensionLevel() {
